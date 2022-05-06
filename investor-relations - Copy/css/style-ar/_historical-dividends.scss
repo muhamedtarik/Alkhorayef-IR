@@ -1,0 +1,23 @@
+.historical-dividends {
+  background-color: $main-background;
+  border-radius: unset;
+  padding: 15px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  margin-bottom: 24px;
+  width: calc(65% - 12px);
+  @media (max-width: 991px) {
+    width: 100%;
+  }
+  &__title {
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 25px;
+    @media(max-width:479px){
+      font-size: 5vw;
+  }
+  }
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}

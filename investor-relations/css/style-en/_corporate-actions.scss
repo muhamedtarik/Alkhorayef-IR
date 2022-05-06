@@ -1,0 +1,108 @@
+.corporate-actions {
+    background-color: $main-background;
+    border-radius: unset;
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    position: relative;
+    margin-bottom: 24px;
+    width: calc(33.3% - 16px);
+    @media (min-width: 768px) and (max-width: 1000px) {
+        width: calc(50% - 12px);
+        margin-right: 24px;
+        order: 7;
+    }
+    @media (max-width: 767px) {
+        width: 100%;
+    }
+    &__title {
+        margin-bottom: 20px;
+        font-weight: 400;
+        font-size: 25px;
+        @media(max-width:479px){
+            font-size: 5vw;
+        }
+    }
+    &__tabs {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        li {
+            border-bottom: 2px solid transparent;
+            font-size: 17px;
+            &:hover {
+            }
+        }
+        .active {
+            font-weight: bold;
+            border-bottom: 2px solid $white;
+        }
+    }
+    &__container > ul:not(:first-child) {
+        display: none;
+    }
+    &__list {
+        list-style-type: none;
+        padding-left: 0px;
+        &__item {
+            border-bottom: 1px solid $white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            font-size: 14px;
+            padding-bottom: 5px;
+            line-height: 16px;
+            br {
+                display: none;
+                @media (max-width: 265px) {
+                    display: block;
+                }
+            }
+            &:last-child {
+                border-bottom: unset;
+                cursor: pointer;
+            }
+            &:nth-child(11) {
+                padding-bottom: 12px;
+            }
+            &__name {
+            }
+            &__number {
+            }
+        }
+    }
+    &__more {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+        border-top: 1px solid $white;
+        color: $white;
+        text-decoration: none;
+        margin-top: 20px;
+        font-weight: bold;
+        padding-top: 5px;
+        @media (max-width: 767px) {
+            position: unset;
+        }
+        @media (min-width: 768px) and (max-width: 1000px) {
+            position: unset;
+        }
+        &:hover {
+            color: $white;
+            text-decoration: none;
+        }
+        &__name {
+        }
+        &__icon {
+            font-size: 13px;
+        }
+    }
+}

@@ -1,0 +1,108 @@
+.calender {
+    background-color: $main-background;
+    border-radius: unset;
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    position: relative;
+    width: calc(33.3% - 16px);
+    margin-right: 24px;
+    margin-bottom: 24px;
+    @media (min-width: 768px) and (max-width: 1000px) {
+        width: calc(50% - 12px);
+        margin-right: 0px;
+        order: 2;
+    }
+    @media (max-width: 767px) {
+        width: 100%;
+        margin-right: 0;
+    }
+    &__title {
+        font-weight: 400;
+        font-size: 25px;
+        margin-top: 0px;
+        margin-bottom: 20px;
+        @media(max-width:479px){
+            font-size: 5vw;
+        }
+    }
+    &__container {
+        display: flex;
+        margin-bottom: 10px;
+        &__date {
+            width: 20%;
+            line-height: 20px;
+            span {
+                font-size: 18px;
+                &:first-child {
+                    font-weight: bold;
+                    font-size: 23px;
+                }
+            }
+        }
+        &__text {
+            width: 80%;
+            margin-left: 10px;
+            &__category {
+                font-size: 12px;
+                border: 1px solid $white;
+                padding: 1px 5px;
+                margin-bottom: 5px;
+                display: inline-block;
+            }
+            &__details {
+                font-size: 14px;
+                margin-bottom: 5px;
+                p,
+                span {
+                    font-size: inherit !important;
+                    font-family: inherit !important;
+                }
+            }
+            &__companies {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 11px;
+                &__first {
+                    font-size: 9px;
+                    font-weight: 500;
+                }
+                &__last {
+                    background-color: $white;
+                    color: $main-color;
+                    padding: 2px 5px;
+                    cursor: pointer;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    &__more {
+        position: unset;
+        bottom: 15px;
+        right: 15px;
+        left: 15px;
+        border-top: 1px solid $white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $white;
+        text-decoration: none;
+        margin-top: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        padding-top: 5px;
+        @media (max-width: 767px) {
+            position: unset;
+        }
+        &:hover {
+            color: $white;
+            text-decoration: none;
+        }
+        span {
+        }
+        i {
+            font-size: 13px;
+        }
+    }
+}

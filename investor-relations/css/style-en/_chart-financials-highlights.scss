@@ -1,0 +1,176 @@
+.chart-financials-highlights {
+    background-color: $main-background;
+    border-radius: unset;
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    width: 100%;
+    &__panner {
+        display: none;
+        position: absolute;
+        top: 0;
+        color: $white;
+        transition: all 0.5s;
+        z-index: 200;
+        font-size: 12px;
+        @media (max-width: 990px) {
+            display: block;
+        }
+        &:hover {
+            cursor: pointer;
+            color: $white;
+        }
+    }
+    .active-scroll {
+        color: $green;
+    }
+    #chart-financials-highlights__pan-left {
+        left: 100px;
+        @media (min-width: 470px) and (max-width: 580px) {
+            left: 95px;
+        }
+        @media (min-width: 400px) and (max-width: 469px) {
+            left: 90px;
+        }
+        @media (min-width: 320px) and (max-width: 399px) {
+            left: 80px;
+        }
+        @media (max-width: 319px) {
+            left: 70px;
+        }
+    }
+    #chart-financials-highlights__pan-right {
+        right: -14px;
+    }
+    &__currency {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        @media (max-width: 550px) {
+            display: block;
+        }
+    }
+    &__title {
+        font-weight: 400;
+        font-size: 25px;
+        @media(max-width:479px){
+            font-size: 5vw;
+        }
+    }
+    &__tabs {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 114px;
+        border-radius: unset;
+        border: 1px solid $white;
+        list-style: none;
+        padding: 0;
+        overflow: hidden;
+        margin-bottom: 0px;
+        @media (max-width: 550px) {
+            float: right;
+            margin: 15px 0px;
+        }
+        li {
+            cursor: pointer;
+            font-size: 14px;
+            padding: 3px 15px;
+            border-radius: unset;
+            &:hover {
+            }
+        }
+        .active {
+            background-color: $white;
+            border-radius: unset;
+            color: $main-color;
+            font-weight: bold;
+        }
+    }
+    &__container > div:not(:first-child) {
+        display: none;
+    }
+    &__data {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        position: relative;
+        &__date {
+            width: 140px;
+            @media (max-width: 990px) {
+                width: 150px;
+            }
+            &__day {
+                border-bottom: 1px solid $white;
+                padding-top: 20px;
+                font-size: 15px;
+                padding-bottom: 2px;
+                height: 50px;
+                @media (min-width: 350px) and (max-width: 500px) {
+                    font-size: 14px;
+                }
+                @media (max-width: 350px) {
+                    font-size: 12px;
+                }
+                &:first-child {
+                    font-weight: bold;
+                    font-size: 16px;
+                    padding-top: 0px;
+                    height: unset;
+                }
+            }
+        }
+        &__details {
+            width: inherit;
+            @media (max-width: 990px) {
+                white-space: nowrap;
+                -ms-overflow-style: none; /* for Internet Explorer, Edge */
+                scrollbar-width: none; /* for Firefox */
+                overflow-x: scroll;
+                &::-webkit-scrollbar {
+                    display: none; /* for Chrome, Safari, and Opera */
+                }
+            }
+            &__table {
+                width: 100%;
+                @media (max-width: 990px) {
+                    width: 900px;
+                }
+                &__row {
+                    &__head {
+                        text-align: center;
+                        width: 12.5%;
+                        border-bottom: 1px solid $white;
+                        padding-top: 15px;
+                        font-size: 16px;
+                        padding-top: 0px;
+                        padding-bottom: 2px;
+                        &__text {
+                        }
+                    }
+                    &__data {
+                        text-align: center;
+                        width: 12.5%;
+                        border-bottom: 1px solid $white;
+                        padding-top: 20px;
+                        font-size: 14px;
+                        height: 50px;
+                        padding-bottom: 2px;
+                        @media (max-width: 350px) {
+                            font-size: 12px;
+                        }
+                        &__text {
+                        }
+                    }
+                    .red {
+                        color: $red;
+                    }
+                    .green {
+                        color: $green;
+                    }
+                }
+            }
+        }
+    }
+}

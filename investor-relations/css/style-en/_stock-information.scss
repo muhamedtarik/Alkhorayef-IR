@@ -1,0 +1,87 @@
+.stock-information {
+  background-color: $main-background;
+  padding: 15px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  position: relative;
+  margin-bottom: 24px;
+  width: calc(35% - 12px);
+  display: flex;
+  flex-direction: column;
+  @media (max-width: 991px) {
+    width: 100%;
+  }
+  &__title {
+    font-weight: 400;
+    font-size: 25px;
+    margin-bottom: 20px;
+    @media(max-width:479px){
+      font-size: 5vw;
+  }
+  }
+  &__list {
+    margin-bottom: 30px;
+    &__item {
+      font-size: 16px;
+      padding: 10px 0px;
+      list-style-type: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid $white;
+      @media(max-width:479px){
+        font-size: 3.4vw;
+      }
+    }
+  }
+  .stock-information-tabs {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 114px;
+    border-radius: unset;
+    border: 1px solid $white;
+    margin: 0px auto 20px auto;
+    list-style: none;
+    padding: 0;
+    overflow: hidden;
+    .stock-information-tabs li {
+      cursor: pointer;
+      font-size: 14px;
+      padding: 3px 15px;
+      border-radius: unset;
+      &.active{
+        background-color: $white;
+        border-radius: unset;
+        color: $main-color;
+        font-weight: bold;
+      }
+    }
+  }
+  .stock-information__container > div:not(:first-child) {
+    display: none;
+  }
+  &__more {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    left: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid $white;
+    color: $white;
+    text-decoration: none;
+    font-weight: bold;
+    padding-top: 5px;
+    &:hover {
+      color: $white;
+      text-decoration: none;
+    }
+    &__icon {
+      font-size: 13px;
+    }
+     @media (max-width: 991px) {
+   position: unset;
+  }
+  }
+}

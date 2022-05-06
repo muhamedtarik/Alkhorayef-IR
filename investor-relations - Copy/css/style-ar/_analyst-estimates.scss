@@ -1,0 +1,77 @@
+.analyst-estimates {
+    background-color: $main-background;
+    border-radius: unset;
+    padding: 15px;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    width: calc(33.3% - 16px);
+    margin-left: 24px;
+    @media (min-width: 768px) and (max-width: 1000px) {
+        width: calc(50% - 12px);
+        order: 9;
+    }
+    @media (max-width: 767px) {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 24px;
+    }
+    &__title {
+        font-weight: 400;
+        font-size: 25px;
+        margin-bottom: 20px;
+        @media(max-width:479px){
+            font-size: 5vw;
+          }
+    }
+    &__container {
+        display: flex;
+        margin-bottom: 10px;
+        &__text {
+            width: 100%;
+            &__details {
+                font-size: 14px;
+                font-weight: 500;
+                margin-bottom: 5px;
+            }
+            &__companies {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 11px;
+                font-weight: 400;
+                &__first {
+                    font-size: 11px;
+                }
+                &__last {
+                    background-color: $white;
+                    color: $main-color;
+                    padding: 2px 5px;
+                    cursor: pointer;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    &__more {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        border-top: 1px solid $white;
+        margin-top: 20px;
+        position: absolute;
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+        font-weight: bold;
+        padding-top: 5px;
+        @media (max-width: 767px) {
+            position: unset;
+        }
+        span {
+        }
+        i {
+            font-size: 13px;
+        }
+    }
+}

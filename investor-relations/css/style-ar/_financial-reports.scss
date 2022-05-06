@@ -1,0 +1,103 @@
+.financial-reports {
+    width: 100%;
+    background-color: $main-background;
+    border-radius: unset;
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    position: relative;
+    &__panner {
+        display: none;
+        position: absolute;
+        top: 60px;
+        color: $white;
+        transition: all 0.5s;
+        z-index: 200;
+        font-size: 12px;
+        @media (max-width: 780px) {
+            display: block;
+        }
+        &:hover {
+            cursor: pointer;
+            color: $white;
+        }
+    }
+    .active-scroll {
+        color: $green;
+    }
+    #financial-reports__panner-left {
+        right: 1px;
+    }
+    #financial-reports__panner-right {
+        left: 1px;
+    }
+    &__container {
+        width: 100%;
+        direction: ltr;
+        @media (max-width: 780px) {
+            white-space: nowrap;
+            -ms-overflow-style: none; /* for Internet Explorer, Edge */
+            scrollbar-width: none; /* for Firefox */
+            overflow-x: scroll;
+            &::-webkit-scrollbar {
+                display: none; /* for Chrome, Safari, and Opera */
+            }
+        }
+    }
+    &__title {
+        font-size: 25px;
+        margin-top: 0px;
+        margin-bottom: 20px;
+        font-weight: 400;
+        @media(max-width:479px){
+            font-size: 5vw;
+        }
+    }
+    &__table {
+        width: 100%;
+        direction: rtl !important;
+        @media (min-width: 601px) and (max-width: 780px) {
+            width: 800px;
+        }
+        @media (max-width: 600px) {
+            width: 700px;
+        }
+        &__row {
+            border-bottom: 1px solid $white;
+            &__data {
+                width: calc(100% / 7);
+                text-align: center;
+                padding: 10px;
+                &:first-child {
+                    text-align: right;
+                    width: 9%;
+                    background-color: $main-background;
+                    position: sticky;
+                    right: 0;
+                    padding-right: 0px;
+                }
+                &:last-child{
+                    padding-left: 0px;
+                }
+                &__text {
+                    font-size: 15px;
+                    font-weight: 500;
+                    &__link {
+                        color: $white;
+                        text-decoration: none;
+                        width: 17px;
+                        height: 17px;
+                        &:nth-child(2) {
+                            margin: 0px 3px;
+                        }
+                        &__icon {
+                            width: 18px;
+                            height: 21px;
+                            border-radius: 3px;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

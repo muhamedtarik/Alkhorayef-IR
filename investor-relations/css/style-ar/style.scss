@@ -1,0 +1,118 @@
+@import "./colors";
+@import "./fonts";
+@import "./ticker";
+@import "./calender";
+@import "./annual-reports";
+@import "./Disclosures";
+@import "./financial-ratios";
+@import "./contact-ir";
+@import "./contact-page";
+@import "./latest-news";
+@import "./analyst-estimates";
+@import "./corporate-actions";
+@import "./head";
+@import "./footer";
+@import "./dropdownPopup";
+@import "./financial-reports";
+@import "./Major-Shareholders";
+@import "./foreign-ownership";
+@import "./stock-information";
+@import "./trading-data";
+@import "./Financials-Highlights";
+@import "./milestones";
+@import "./capital-change";
+@import "./Recent-Changes";
+@import "./historical-dividends";
+@import "./main-corporate-actions";
+@import "./main-chart";
+@import "./salaries";
+@import "./chart-financials-highlights";
+@import "./filter";
+@import "./structure";
+@import "./intro";
+@import "./marketvalue";
+@import "./main-financial-statements";
+@import "./main-financial-ratios";
+@import "./main-major-shareholders";
+@import "./main-major-shareholders-filter";
+@import "./loading";
+@import "./pr";
+@import "./scroll-top";
+@import "./subscription";
+@import './boardOfDirectorsShareholders';
+
+html {
+    scroll-behavior: smooth;
+}
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+	font-family: 'GE SS Text Light' !important;
+    direction: rtl;
+    overflow-x: hidden;
+    &::-webkit-scrollbar {
+        width: 0.4em;
+        background-color: $white;
+    }
+    &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: $main-color;
+        border-radius: 2px;
+    }
+    // ::-moz-selection {
+    //     color: $main-color;
+    //     background: $green;
+    // }
+    // ::selection {
+    //     color: $main-color;
+    //     background: $green;
+    // }
+    color: $white;
+}
+main{
+    min-height: calc(100vh - 76px);
+    @media (max-width: 800px) {
+        min-height: calc(100vh - 111px);
+    }
+}
+.widgets-container {
+    padding: 24px 24px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    @media (max-width: 767px) {
+        padding: 24px 10px;
+    }
+    @media (min-width: 768px) and (max-width: 1100px) {
+        padding: 24px 15px;
+    }
+}
+.content > div:not(:first-child) {
+    display: none;
+}
+.hide-scroll {
+    overflow-y: hidden !important;
+}
+.green {
+    color: $green;
+}
+.red {
+    color: $red;
+}

@@ -1,0 +1,34 @@
+.main-chart {
+    background-color: $main-background;
+    border-radius: unset;
+    padding: 15px;
+    width: 100%;
+    margin-bottom: 24px;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    &__select-container {
+        padding-bottom: 20px;
+        border-bottom: 1px solid $white;
+        select {
+            background-color: $main-color;
+            outline: unset;
+            border: 1px solid $white;
+            cursor: pointer;
+            padding: 10px 5px;
+            color: $white;
+            font-size: 16px;
+        }
+    }
+    &__company-name {
+        text-align: center;
+        font-size: 22px;
+        margin: 20px 0px;
+    }
+    &__img {
+        width: 100%;
+        object-fit: cover;
+    }
+    .highcharts-credits {
+        display: none;
+    }
+}

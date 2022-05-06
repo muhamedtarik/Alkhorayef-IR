@@ -1,0 +1,57 @@
+.recent-change {
+    background-color: $main-background;
+    border-radius: unset;
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    position: relative;
+    margin-right: 24px;
+    margin-bottom: 24px;
+    width: calc(35% - 12px);
+    @media (max-width: 991px) {
+        width: 100%;
+        margin-right: 0;
+    }
+    &__title {
+        margin-bottom: 20px;
+        font-weight: 400;
+        font-size: 25px;
+        @media(max-width:479px){
+            font-size: 5vw;
+        }
+    }
+    &__list {
+        list-style-type: none;
+        padding-left: 0px;
+        &__item {
+            border-bottom: 1px solid $white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            padding-bottom: 5px;
+            font-size: 16px;
+            @media (max-width: 479px) {
+                font-size: 3.4vw;
+            }
+        }
+    }
+    &__more {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+        border-top: 1px solid $white;
+        color: $white;
+        text-decoration: none;
+        &:hover {
+            color: $white;
+            text-decoration: none;
+        }
+        &__icon {
+            font-size: 13px;
+        }
+    }
+}

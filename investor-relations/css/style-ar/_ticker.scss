@@ -1,0 +1,93 @@
+.ticker {
+  background-color: $main-background;
+  padding: 15px;
+  border-radius: unset;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  position: relative;
+  margin-left: 24px;
+  margin-bottom: 24px;
+  width: calc(33.3% - 16px);
+  @media (min-width: 768px) and (max-width: 1000px) {
+    width: calc(50% - 12px);
+    order: 1;
+  }
+  @media (max-width: 767px) {
+    width: 100%;
+    margin-left: 0;
+  }
+  &__pointer {
+    color: $green;
+    text-align: center;
+    font-weight: 500;
+  }
+  &__percent {
+    color: $green;
+    font-weight: 500;
+  }
+  .red {
+    color: $red;
+  }
+  .ticker-tab {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    list-style: none;
+    border-top: 1px solid $white;
+    border-bottom: 1px solid $white;
+    padding: 2px 0px;
+    margin-bottom: 15px;
+  }
+  .ticker-tab li {
+    cursor: pointer;
+    transition: 0.2s;
+    padding: 5px 6px;
+    border-radius: 5px;
+    font-size: 13px;
+    @media (max-width: 320px) {
+      font-size: 12px;
+    }
+  }
+  .ticker-tab li.active {
+    background-color: $white;
+    color: $main-color;
+  }
+  .ticker-tab li:hover {
+  }
+  .ticker-container {
+  }
+  .ticker-container > div:not(:first-child) {
+    display: none;
+  }
+
+  &__more {
+    position: unset;
+    bottom: 15px;
+    right: 15px;
+    left: 15px;
+    border-top: 1px solid $white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $white;
+    text-decoration: none;
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    @media (max-width: 767px) {
+      position: unset;
+    }
+    &:hover {
+      color: $white;
+      text-decoration: none;
+    }
+    span {
+    }
+    i {
+      font-size: 13px;
+    }
+  }
+  .highcharts-credits {
+    display: none;
+  }
+}

@@ -1,0 +1,80 @@
+.annual-reports {
+  background-color: $main-background;
+  padding: 15px;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  width: calc(33.3% - 16px);
+  margin-right: 24px;
+  margin-bottom: 24px;
+  @media (min-width: 768px) and (max-width: 1000px) {
+    width: calc(50% - 12px);
+    margin-right: 24px;
+    order: 3;
+  }
+  @media (max-width: 767px) {
+    width: 100%;
+    margin-right: 0;
+  }
+  &__title {
+    font-weight: 400;
+    font-size: 25px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    @media(max-width:479px){
+      font-size: 5vw;
+    }
+  }
+  &__number {
+    font-size: 17px;
+    margin-bottom: 20px;
+  }
+  &__download {
+    margin: 10px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 85%;
+    text-decoration: none;
+    color: $white;
+    &:hover {
+      color: $white;
+      text-decoration: none;
+    }
+    svg {
+      width: 22px;
+      height: 22px;
+    }
+    span {
+      margin: 0px 15px;
+      font-size: 17px;
+    }
+  }
+  &__more {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    left: 15px;
+    border-top: 1px solid $white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $white;
+    text-decoration: none;
+    margin-top: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    padding-top: 5px;
+    @media (max-width: 767px) {
+      position: unset;
+    }
+    &:hover {
+      color: $white;
+      text-decoration: none;
+    }
+    span {
+    }
+    i {
+      font-size: 13px;
+    }
+  }
+}

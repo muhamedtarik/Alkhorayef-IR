@@ -1,0 +1,334 @@
+.main-major-shareholders {
+    width: 100%;
+    background-color: $main-background;
+    padding: 15px;
+    border-radius: unset;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+    &__title {
+        font-weight: 400;
+        font-size: 25px;
+        margin-bottom: 20px;
+
+        @media(max-width:479px) {
+            font-size: 5vw;
+        }
+    }
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        white-space: nowrap;
+        -ms-overflow-style: none; /* for Internet Explorer, Edge */
+        scrollbar-width: none; /* for Firefox */
+        overflow-x: auto;
+        &::-webkit-scrollbar {
+            display: none; /* for Chrome, Safari, and Opera */
+        }
+
+        &__tabs {
+            display: flex;
+            align-items: flex-start;
+            list-style: none;
+            li {
+                cursor: pointer;
+                border-bottom: 2px solid transparent;
+                font-size: 18px;
+                margin-right: 30px;
+                &:last-child{
+                    margin-right: 0px;
+                }
+                @media(max-width:479px){
+                    font-size: 5vw;
+                }
+                &.active {
+                    font-weight: bold;
+                    border-bottom: 2px solid $white;
+                }
+            }
+        }
+        &__options {
+            display: none;
+            align-items: center;
+            position: sticky;
+            right: 0;
+            padding-left: 15px;
+            background-color: $main-color;
+            border-bottom: 1px solid $main-color;
+            min-height: 26px;
+            &__link {
+                &:nth-child(2) {
+                    margin: 0px 10px;
+                }
+
+                svg {
+                    width: 18px;
+                    height: 100%;
+                    &:hover path {
+                        fill: $green;
+                    }
+
+                    path {
+                        fill: $white;
+                        transition: all 0.5s;
+                    }
+                }
+            }
+        }
+    }
+
+    &__container {
+        &__major-shareholders,
+        &__historical-changes {
+            margin-bottom: 20px;
+
+            &__panner {
+                display: none;
+                position: absolute;
+                top: 0;
+                color: $white;
+                transition: all 0.5s;
+                z-index: 200;
+                font-size: 12px;
+
+                @media (min-width: 920px) {
+                    display: none !important;
+                }
+
+                @media (max-width: 919px) {
+                    display: block;
+                }
+
+                @media (max-width: 399px) {
+                    top: -15px;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    color: $white;
+                }
+            }
+
+            .active-scroll {
+                color: $green;
+            }
+
+            #main-major-shareholders__container__major-shareholders__panner-left,
+            #main-major-shareholders__container__historical-changes__panner-left {
+                left: 85px;
+
+                @media (min-width: 650px) {
+                    left: 160px;
+                }
+
+                @media (min-width: 500px) and (max-width: 649px) {
+                    left: 145px;
+                }
+
+                @media (min-width: 450px) and (max-width: 499px) {
+                    left: 115px;
+                }
+
+                @media (min-width: 400px) and (max-width: 449px) {
+                    left: 115px;
+                }
+
+                @media (min-width: 330px) and (max-width: 399px) {
+                    left: 100px;
+                }
+
+                @media (max-width: 329px) {
+                    left: 90px;
+                }
+            }
+
+            #main-major-shareholders__container__major-shareholders__panner-right,
+            #main-major-shareholders__container__historical-changes__panner-right {
+                right: -10px;
+            }
+
+            &__data {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                position: relative;
+
+                @media (max-width: 919px) {
+                    padding: 0px 10px;
+                }
+
+                &__shareholders {
+                    width: 300px;
+
+                    @media (min-width: 501px) and (max-width: 1049px) {
+                        width: 255px;
+                    }
+
+                    @media (max-width: 500px) {
+                        width: 200px;
+                    }
+
+                    &__name {
+                        border-bottom: 1px solid $white;
+                        padding-top: 15px;
+                        font-size: 15px;
+                        padding-bottom: 2px;
+
+                        @media (max-width: 1049px) {
+                            font-size: 13px;
+                        }
+
+                        br {
+                            display: none;
+
+                            @media (max-width: 500px) {
+                                display: block;
+                            }
+                        }
+
+                        &:first-child {
+                            font-weight: bold;
+                            font-size: 16px;
+                            padding-top: 0px;
+
+                            @media (max-width: 1049px) {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+
+                &__details {
+                    width: inherit;
+
+                    @media (max-width: 919px) {
+                        white-space: nowrap;
+                        -ms-overflow-style: none; /* for Internet Explorer, Edge */
+                        scrollbar-width: none; /* for Firefox */
+                        overflow-x: scroll;
+
+                        &::-webkit-scrollbar {
+                            display: none; /* for Chrome, Safari, and Opera */
+                        }
+                    }
+
+                    &__table {
+                        width: 100%;
+
+                        @media (max-width: 919px) {
+                            width: 700px;
+                        }
+
+                        &__row {
+                            &__head {
+                                text-align: center;
+                                width: 20%;
+                                border-bottom: 1px solid $white;
+                                padding-top: 15px;
+                                font-size: 16px;
+                                padding-top: 0px;
+                                padding-bottom: 2px;
+
+                                @media (max-width: 1049px) {
+                                    font-size: 14px;
+                                }
+
+                                &__text {
+                                }
+                            }
+
+                            &__data {
+                                text-align: center;
+                                width: 20%;
+                                border-bottom: 1px solid $white;
+                                padding-top: 15px;
+                                font-size: 15px;
+                                padding-bottom: 2px;
+
+                                @media (max-width: 1049px) {
+                                    font-size: 13px;
+                                }
+
+                                @media (max-width: 500px) {
+                                    line-height: 40px;
+                                }
+
+                                &__text {
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &__major-shareholders {
+            &__data {
+                &__shareholders {
+                    &__name {
+                        @media (max-width: 500px) {
+                            height: 60px;
+                        }
+
+                        &:first-child {
+                            height: unset;
+                        }
+                    }
+                }
+
+                &__details {
+                    &__table {
+                        &__row {
+                            &__data {
+                                &:first-child {
+                                }
+
+                                @media (max-width: 500px) {
+                                    line-height: unset;
+                                    height: 60px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &__historical-changes {
+            @media (min-width: 886px) and (max-width: 911px) {
+                margin-bottom: 40px;
+            }
+
+            &__panner {
+                @media (max-width: 399px) {
+                    top: 0px;
+                }
+            }
+
+            &__data {
+                &__details {
+                    &__table {
+                        &__row {
+                            &__data {
+                                &:first-child {
+                                    width: 30%;
+                                }
+
+                                @media (max-width: 500px) {
+                                    line-height: unset;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .main-major-shareholders__container > div:not(:first-child) {
+        display: none;
+    }
+}
